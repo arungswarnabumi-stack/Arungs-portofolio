@@ -609,6 +609,7 @@ section{
     background: black;
     color: white;
     margin-bottom: 20px;
+    font-size: clamp(0.5rem, calc( 0.1vw + 1rem), 5rem);
     text-align: right;
 }
 
@@ -622,7 +623,9 @@ section{
         #285AEB 90%
         );
     color: white;
+    font-size: clamp(0.5rem, calc( 0.1vw + 1rem), 5rem);
     max-width: 55%;
+    border-radius: 5em 0 10em 5em;
 }
 
 footer{
@@ -637,5 +640,6 @@ footer{
     min-width: 300px;
 
 }
+
 
 
