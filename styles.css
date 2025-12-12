@@ -285,7 +285,7 @@ section{
 
 @media(max-width:800px){
     .container{
-        height : auto;
+        height : inherit;
         flex-wrap: wrap;
     }
     .picture1{
@@ -630,6 +630,7 @@ footer{
     min-width: 300px;
 
 }
+
 
 
 
