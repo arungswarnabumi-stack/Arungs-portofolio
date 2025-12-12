@@ -511,7 +511,7 @@ section{
     position: relative;
     color:yellow;
     text-align: center;
-    font-size: clamp(1.5rem, calc( 2.5vw + 1rem ), 8rem);
+    font-size: clamp(4rem, calc( 2.5vw + 1rem ), 8rem);
     min-width: 300px;
     animation: appear linear;
     animation-timeline: view();
@@ -640,6 +640,7 @@ footer{
     min-width: 300px;
 
 }
+
 
 
 
