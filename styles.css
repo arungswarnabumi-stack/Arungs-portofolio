@@ -283,25 +283,15 @@ section{
     animation-range: 0 cover 25%;
 }
 
-@media(max-width:1250px){
-    .container{
-        flex-wrap: wrap;
-    }
-}
-
 @media(max-width:800px){
     .container{
-        justify-content: center;
-        align-items: center;
         height : auto;
+        flex-wrap: wrap;
     }
     .picture1{
         width: 200px;
         height: 200px;
     }
-}
-
-@media(max-width:950px){
     .abt-text{
         font-size:  0.9rem;
         text-align: center;
@@ -309,7 +299,7 @@ section{
 }
 
 .picture1{
-    width: 300px;
+    min-width: 300px;
     height: 300px;
     border-radius: 360px;
     background:#000000;
@@ -640,6 +630,7 @@ footer{
     min-width: 300px;
 
 }
+
 
 
 
