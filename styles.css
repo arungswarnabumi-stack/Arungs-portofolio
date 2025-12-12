@@ -545,6 +545,8 @@ section{
     padding: min(3em, 7%);
     border-radius: 2em;
     text-decoration: none;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1); 
     box-shadow: 3px 3px 7px #000000;
     animation: appear linear;
     animation-timeline: view();
@@ -631,4 +633,5 @@ footer{
     color: rgb(214, 212, 212);
     box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
     min-width: 300px;
+
 }
