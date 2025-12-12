@@ -554,9 +554,8 @@ section{
 }
 
 .acc{
-    display: grid;
-    grid-template-rows: subgrid;
-    grid-row: span 4;
+    display: flex;
+    flex-direction: column;
     gap: 0px 0px;
     background-color: rgb(13, 17, 23);
     padding: 30px 20px;
@@ -566,6 +565,10 @@ section{
     animation: appear linear;
     animation-timeline: view();
     animation-range: 0 cover 30%;
+}
+
+.acc p{
+    flex-grow: 1;
 }
 
 .acc img{
@@ -635,3 +638,4 @@ footer{
     min-width: 300px;
 
 }
+
