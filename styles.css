@@ -554,9 +554,9 @@ section{
 }
 
 .acc{
-    display: flex;
-    flex-direction: column;
-    gap: 0px 0px;
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
     background-color: rgb(13, 17, 23);
     padding: 30px 20px;
     border-radius: 10px;
@@ -567,9 +567,6 @@ section{
     animation-range: 0 cover 30%;
 }
 
-.acc p{
-    flex-grow: 1;
-}
 
 .acc img{
     width: 100px;
@@ -612,6 +609,7 @@ section{
     background: black;
     color: white;
     margin-bottom: 20px;
+    text-align: right;
 }
 
 #instagram{
@@ -624,6 +622,7 @@ section{
         #285AEB 90%
         );
     color: white;
+    max-width: 55%;
 }
 
 footer{
@@ -638,4 +637,5 @@ footer{
     min-width: 300px;
 
 }
+
 
