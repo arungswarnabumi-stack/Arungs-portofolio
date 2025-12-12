@@ -159,17 +159,6 @@
             const sidebar = document.querySelector('.sidebar');
             sidebar.style.display = 'none'
         }
-        
-        function animate() {
-            const time = Date.now();
-            ctx.clearRect(0, 0, width, height);
-            
-            ctx.globalCompositeOperation = 'lighter';
-            waves.forEach(wave => wave.draw(time));
-            ctx.globalCompositeOperation = 'source-over';
-            
-            requestAnimationFrame(animate);
-        }
     </script>
     
 </main>
@@ -180,4 +169,5 @@
 </body>
 
 </html>
+
 
