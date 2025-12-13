@@ -457,7 +457,7 @@ nav li:first-child {
     border-radius: 15px;
     overflow: hidden;
     transition: transform 0.3s;
-    border: 1px solid rgba(253, 253, 253, 0.384);
+    border: 1px solid rgba(253, 253, 253, 0.212);
     text-align: center;
     animation: appear linear;
     animation-timeline: view();
@@ -657,6 +657,7 @@ footer{
     box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
     min-width: 300px;
 }
+
 
 
 
