@@ -297,7 +297,7 @@ section{
     }
 }
 
-@media(max-height:600px){
+@media(max-height:770px){
     .container{
         height: auto;
         padding: 30px 0;
@@ -636,6 +636,7 @@ footer{
     min-width: 300px;
 
 }
+
 
 
 
