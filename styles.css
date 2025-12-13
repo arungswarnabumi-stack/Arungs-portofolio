@@ -495,7 +495,7 @@ nav li:first-child {
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .project-content a:hover{
@@ -659,5 +659,6 @@ footer{
     box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
     min-width: 300px;
 }
+
 
 
