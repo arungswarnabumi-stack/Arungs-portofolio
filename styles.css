@@ -627,7 +627,7 @@ nav li:first-child {
     background: black;
     color: white;
     margin-bottom: 20px;
-    font-size: clamp(0.5rem, calc( 0.1vw + 1rem), 5rem);
+    font-size: clamp(0.5rem, calc( 0.2vw + 1rem), 5rem);
     text-align: right;
 }
 
@@ -641,7 +641,7 @@ nav li:first-child {
         #285AEB 90%
         );
     color: white;
-    font-size: clamp(0.5rem, calc( 0.1vw + 1rem), 5rem);
+    font-size: clamp(0.5rem, calc( 0.2vw + 1rem), 5rem);
     max-width: 55%;
     border-radius: 5em 0 10em 5em;
 }
@@ -657,6 +657,7 @@ footer{
     box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
     min-width: 300px;
 }
+
 
 
 
