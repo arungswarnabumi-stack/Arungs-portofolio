@@ -28,9 +28,8 @@ h1, h2{
     margin-bottom: 10px;
 }
 
-div {
-    display: block;
-    unicode-bidi: isolate;
+.title{
+    font-size: clamp(1.5rem, calc( 4vw + 1rem), 5rem);
 }
 
 p {
@@ -40,18 +39,43 @@ p {
     line-height: 1.6;
 }
 
-.skills h3 {
-    color: hsl(52, 100%, 50%);
+div {
     display: block;
-    font-size: 2em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
     unicode-bidi: isolate;
 }
 
+section{
+    min-height: 100vh;
+    padding:80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(2px);
+    background-color: #00000060;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#home{
+    color:white;
+    text-align: center;
+}
+
+#home h1{
+    font-size: 3.5rem;
+}
+
+#home p{
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+/* Navigation Bar */
 nav{
     right:0;
     top:0;
@@ -109,6 +133,7 @@ nav li:first-child {
     margin-right: auto;
 }
 
+/* Sidebar for mobile */
 .sidebar{
     position: fixed;
     top: 0;
@@ -162,7 +187,7 @@ nav li:first-child {
     }
 }
 
-
+/* Shiny Text Animation */
 .shinytext{
     font-size: 3rem;
     position: relative;
@@ -185,37 +210,19 @@ nav li:first-child {
     }
 }
 
-section{
-    min-height: 100vh;
-    padding:80px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    z-index: 1;
-    backdrop-filter: blur(2px);
-    background-color: #00000060;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+/* Animation for appearance*/
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
 }
 
-#home{
-    color:white;
-    text-align: center;
-}
-
-#home h1{
-    font-size: 3.5rem;
-}
-
-#home p{
-    font-size: 1.3rem;
-    max-width: 700px;
-    margin: 0 auto 30px;
-}
-
+/* home page */
 .pfp {
     width: 350px;
     height: 350px;
@@ -226,7 +233,6 @@ section{
     position: relative;
     flex-shrink: 3;
 }
-
 
 .pfp img {
     width: 100%;
@@ -245,10 +251,6 @@ section{
     z-index: 2;
 }
 
-.title{
-    font-size: clamp(1.5rem, calc( 4vw + 1rem), 5rem);
-}
-
 @media(max-width:600px){
     .pfp{
         width: 250px;
@@ -256,17 +258,7 @@ section{
     }
 }
 
-@keyframes appear{
-    from{
-        opacity: 0;
-        scale: 0.5;
-    }
-    to{
-        opacity: 1;
-        scale: 1;
-    }
-}
-
+/* about me section */
 .container{
     width: 100%;
     height: 87vh;
@@ -285,7 +277,7 @@ section{
 
 @media(max-width:800px){
     .container{
-        height : inherit;
+        height: 100vh;
         flex-wrap: wrap;
     }
     .picture1{
@@ -293,7 +285,7 @@ section{
         height: 200px;
     }
     .abt-text{
-        font-size:  0.9rem;
+        text-align: center;
     }
 }
 
@@ -340,7 +332,7 @@ section{
     animation-range: 0 cover 30%;
 }
 
-
+/* skills section */
 #skills{
     backdrop-filter: blur(5px);
     background-color: #00000093;
@@ -358,6 +350,18 @@ section{
     animation: appear both;
     animation-timeline: view();
     animation-range: 0 cover 25%;
+}
+
+.skills h3 {
+    color: hsl(52, 100%, 50%);
+    display: block;
+    font-size: 2em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
 }
 
 .skill-container{
@@ -400,6 +404,7 @@ section{
     transition: transform 0.3s ease;
 }
 
+/* projects section */
 #projects{
     backdrop-filter: blur(5px);
     background-color: #00000093;
@@ -473,7 +478,6 @@ section{
 .project-content h3 {
     display: block;
     color: hsl(52, 100%, 50%);
-    font-size: 2em;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
@@ -487,6 +491,7 @@ section{
     transition: transform 0.3s ease;
 }
 
+/* socials section */
 #socials{
     backdrop-filter: blur(5px);
     background-color: rgb(1, 4, 9);
@@ -525,6 +530,7 @@ section{
     animation-range: 0 cover 30%;
 }
 
+/* links container */
 .social-links{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -532,27 +538,12 @@ section{
     margin-top: 40px;
 }
 
-.links{
-    width: 100%;
-    max-height: fit-content;
-    font-size: clamp(0.8rem, calc( 0.3vw + 1rem), 5rem);
-    background: rgb(31, 31, 31);
-    color: hsl(0, 15%, 90%);
-    padding: min(3em, 7%);
-    border-radius: 2em;
-    text-decoration: none;
-    transition: transform 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1); 
-    box-shadow: 3px 3px 7px #000000;
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: 0 cover 10%;
-}
-
+/* individual account box */
 .acc{
     display: grid;
     grid-template-rows: subgrid;
     grid-row: span 3;
+    gap: 0px 0px;
     background-color: rgb(13, 17, 23);
     padding: 30px 20px;
     border-radius: 10px;
@@ -562,7 +553,6 @@ section{
     animation-timeline: view();
     animation-range: 0 cover 30%;
 }
-
 
 .acc img{
     width: 100px;
@@ -584,6 +574,24 @@ section{
 
 .github{
     fill: #ffffff;
+}
+
+/* individual links */
+.links{
+    width: 100%;
+    max-height: fit-content;
+    font-size: clamp(0.8rem, calc( 0.3vw + 1rem), 5rem);
+    background: rgb(31, 31, 31);
+    color: hsl(0, 15%, 90%);
+    padding: min(3em, 7%);
+    border-radius: 2em;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 3px 3px 7px #000000;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: 0 cover 10%;
 }
 
 .links:hover{
@@ -634,13 +642,4 @@ footer{
     color: rgb(214, 212, 212);
     box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
     min-width: 300px;
-
 }
-
-
-
-
-
-
-
-
