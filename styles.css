@@ -481,10 +481,17 @@ nav li:first-child {
     border-radius: 50%;
     cursor: pointer;
     position: fixed;
+    transition: transform 0.3s ease;
     position-anchor: --carousel;
     position-area: right center;
     translate:-50%;
 }
+
+.skill-container::scroll-button(right):hover, .skill-container::scroll-button(left):hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
 
 .skill-container::scroll-button(left) {
     content: '<';
@@ -772,4 +779,5 @@ footer{
     min-width: 300px;
 
 }
+
 
