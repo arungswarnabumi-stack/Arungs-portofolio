@@ -281,7 +281,6 @@ nav li:first-child {
 }
 
 /* home page */
-
 #home{
     color:white;
     text-align: center;
@@ -421,7 +420,7 @@ nav li:first-child {
     z-index: 2;
     animation: appear both;
     animation-timeline: view();
-    animation-range: 0 cover 25%;
+    animation-range: 0 cover 45%;
 }
 
 .skills h3 {
@@ -436,27 +435,84 @@ nav li:first-child {
     unicode-bidi: isolate;
 }
 
+/*skill carousel*/
 .skill-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%;
+    overflow-x: auto ;
+    margin: 3em auto;
+    display: flex;
+    gap: 1em;
+    scroll-behavior: smooth;
+    anchor-name: --carousel;
+    scroll-snap-type: x mandatory;
+    scroll-marker-group: after;
+}
+
+.skill-container::scroll-marker-group{
+    display: flex;
     justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
-    height: auto;
+    gap: 0.5em;
+}
+
+.skill::scroll-marker{
+    content: '';
+    height: 1em;
+    width: 1em;
+    background-color: rgb(13, 17, 23);
+    border-radius: 50%;
+}
+
+.skill::scroll-marker:target-current{
+    background-color: #5865F2;
+}
+
+.skill-container::-webkit-scrollbar{
+    display: none;
+}
+
+.skill-container::scroll-button(right), .skill-container::scroll-button(left) {
+    content: '>';
+    border: none;
+    font-size: 3rem;
+    color: white;
+    background-color: rgb(31, 111, 235);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    position-anchor: --carousel;
+    position-area: right center;
+    translate:-50%;
+}
+
+.skill-container::scroll-button(left) {
+    content: '<';
+    position-area: left center;
+    translate: 50%;
+}
+
+.skill-container::scroll-button(right):disabled, .skill-container::scroll-button(left):disabled {
+    opacity: 0.5;
+    cursor: auto;
 }
 
 .skills{
+    scroll-snap-align: end;
+    flex: 0 0 36em;
     background-color: rgb(13, 17, 23);
-    padding: 30px;
+    padding: 3em;
     border-radius: 20px;
     box-shadow: 5px 5px 10px #00000094;
     text-align: center;
     transition: transform 0.3s;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    animation: appear both;
-    animation-timeline: view();
-    animation-range: 0 cover 40%;
+}
+
+@media(max-width:1000px){
+    .skills{
+        flex: 0 0 100%;
+    }
 }
 
 .skill{
