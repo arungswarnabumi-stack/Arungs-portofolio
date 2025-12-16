@@ -445,25 +445,6 @@ nav li:first-child {
     scroll-behavior: smooth;
     anchor-name: --carousel;
     scroll-snap-type: x mandatory;
-    scroll-marker-group: after;
-}
-
-.skill-container::scroll-marker-group{
-    display: flex;
-    justify-content: center;
-    gap: 0.5em;
-}
-
-.skill::scroll-marker{
-    content: '';
-    height: 1em;
-    width: 1em;
-    background-color: rgb(13, 17, 23);
-    border-radius: 50%;
-}
-
-.skill::scroll-marker:target-current{
-    background-color: #5865F2;
 }
 
 .skill-container::-webkit-scrollbar{
@@ -779,6 +760,7 @@ footer{
     min-width: 300px;
 
 }
+
 
 
 
