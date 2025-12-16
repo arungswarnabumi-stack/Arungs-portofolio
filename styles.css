@@ -441,7 +441,7 @@ nav li:first-child {
     overflow-x: auto ;
     margin: 3em auto;
     display: flex;
-    gap: 1em;
+    gap: 1.5em;
     scroll-behavior: smooth;
     anchor-name: --carousel;
     scroll-snap-type: x mandatory;
@@ -760,6 +760,7 @@ footer{
     min-width: 300px;
 
 }
+
 
 
 
